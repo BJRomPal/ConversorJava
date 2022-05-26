@@ -29,40 +29,19 @@ public class ProgramaConversion_V1 {
 						numeroCorrecto = true;
 						ConversorMonedas conversorMon = new ConversorMonedas(numero);
 						conversorMon.conversion();
-						RepetirConversion repetir = new RepetirConversion();
-						int decision = repetir.preguntarRepeticion();
-
-						if (decision == 1) {
-							JOptionPane.showMessageDialog(null, "Programa Terminado", "", 0);
-							programaFuncionando = false;
-						}
-
 					} else if (opcion == 1) {
 						numero = Double.parseDouble(
 								JOptionPane.showInputDialog(null, "Ingrese la cantidad de peso a convertir"));
 						numeroCorrecto = true;
 						ConversorPesos conversorPeso = new ConversorPesos(numero);
 						conversorPeso.conversion();
-						RepetirConversion repetir = new RepetirConversion();
-						int decision = repetir.preguntarRepeticion();
-
-						if (decision == 1) {
-							JOptionPane.showMessageDialog(null, "Programa Terminado", null, 0);
-							programaFuncionando = false;
-						}
 					} else if (opcion == 2) {
 						numero = Double.parseDouble(
 								JOptionPane.showInputDialog(null, "Ingrese la cantidad de temperatura a convertir"));
 						numeroCorrecto = true;
 						ConversorTemperatura conversorTemp = new ConversorTemperatura(numero);
 						conversorTemp.conversion();
-						RepetirConversion repetir = new RepetirConversion();
-						int decision = repetir.preguntarRepeticion();
 
-						if (decision == 1) {
-							JOptionPane.showMessageDialog(null, "Programa Terminado", "", 0);
-							programaFuncionando = false;
-						}
 					}
 				} catch (NumberFormatException e) {
 					JOptionPane.showMessageDialog(null, "Valor Incorrecto", "Error", 0);
@@ -70,6 +49,13 @@ public class ProgramaConversion_V1 {
 					JOptionPane.showMessageDialog(null, "Usted ha cancelado", "Cancelado", 0);
 					numeroCorrecto = true;
 				}
+			}
+			RepetirConversion repetir = new RepetirConversion();
+			int decision = repetir.preguntarRepeticion();
+
+			if (decision == 1) {
+				JOptionPane.showMessageDialog(null, "Programa Terminado", "", 0);
+				programaFuncionando = false;
 			}
 
 		}
