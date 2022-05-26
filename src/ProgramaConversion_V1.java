@@ -1,5 +1,11 @@
 import javax.swing.JOptionPane;
 
+import conversores.ConversorMonedas;
+import conversores.ConversorPesos;
+import conversores.ConversorTemperatura;
+import conversores.MainMenu;
+import conversores.RepetirConversion;
+
 public class ProgramaConversion_V1 {
 
 	public static void main(String[] args) {

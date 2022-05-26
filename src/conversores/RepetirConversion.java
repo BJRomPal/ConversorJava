@@ -1,16 +1,16 @@
+package conversores;
 import javax.swing.JOptionPane;
 
 @SuppressWarnings("serial")
-public class MainMenu extends JOptionPane {
 
-	//public static void main(String[] args) {
+public class RepetirConversion extends JOptionPane {
 	
-	public int seleccionarOpcion() {
+	public int preguntarRepeticion () {
 	
-		String[] opciones = { "Moneda", "Pesos", "Temperatura" };
+		String[] opciones = { "Si", "No" };
 		int opcion = JOptionPane.showOptionDialog(null // componente
-				, "¿Que conversor desea utilizar?" // Mensaje
-				, "Menú Principal" // Titulo en la barra del cuadro
+				, "¿Quiere Realizar otra conversion?" // Mensaje
+				, null // Titulo en la barra del cuadro
 				, JOptionPane.DEFAULT_OPTION // Tipo de opciones
 				, JOptionPane.PLAIN_MESSAGE // Tipo de mensaje (icono)
 				, null // Icono (ninguno)
@@ -20,3 +20,5 @@ public class MainMenu extends JOptionPane {
 		return opcion;
 	}
 }
+	
+
