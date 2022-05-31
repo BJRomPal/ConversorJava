@@ -65,6 +65,11 @@ public class ConversorMonedas {
 		return this.numero * yuan;
 	}
 	
+	public String escribeMensaje (String moneda1, String moneda2, double convertido) {
+		String mensaje = this.numero + " " + moneda1 + " equivalen a " + convertido + " " + moneda2;
+		return mensaje;
+	}
+	
 	public void conversion () {
 		String moneda1;
 		String moneda2;
@@ -78,61 +83,62 @@ public class ConversorMonedas {
 			moneda1 = "Pesos";
 			moneda2 = "Dolares";
 			convertido = Math.round(pesoADolar() * 100.0) / 100.0;
-			String mensaje = this.numero + " " + moneda1 + " equivalen a " + convertido + " " + moneda2;
+			String mensaje = escribeMensaje(moneda1, moneda2, convertido);
+					//this.numero + " " + moneda1 + " equivalen a " + convertido + " " + moneda2;
 			JOptionPane.showMessageDialog(null, mensaje, "Conversion efectuada", 1);
 		}else if (moneda == "Peso a Euro") {
 			moneda1 = "Pesos";
 			moneda2 = "Euros";
 			convertido = Math.round(pesoAEuro() * 100.0) / 100.0;
-			String mensaje = this.numero + " " + moneda1 + " equivalen a " + convertido + " " + moneda2;
+			String mensaje = escribeMensaje(moneda1, moneda2, convertido);
 			JOptionPane.showMessageDialog(null, mensaje, "Conversion efectuada", 1);
 		}else if (moneda == "Peso a Real") {
 			moneda1 = "Pesos";
 			moneda2 = "Reales";
 			convertido = Math.round(pesoAReal() * 100.0) / 100.0;
-			String mensaje = this.numero + " " + moneda1 + " equivalen a " + convertido + " " + moneda2;
+			String mensaje = escribeMensaje(moneda1, moneda2, convertido);
 			JOptionPane.showMessageDialog(null, mensaje, "Conversion efectuada", 1);
 		}else if (moneda == "Peso a Yen") {
 			moneda1 = "Pesos";
 			moneda2 = "Yenes";
 			convertido = Math.round(pesoAYen() * 100.0) / 100.0;
-			String mensaje = this.numero + " " + moneda1 + " equivalen a " + convertido + " " + moneda2;
+			String mensaje = escribeMensaje(moneda1, moneda2, convertido);
 			JOptionPane.showMessageDialog(null, mensaje, "Conversion efectuada", 1);
 		}else if (moneda == "Peso a Yuan") {
 			moneda1 = "Pesos";
 			moneda2 = "Yuanes";
 			convertido = Math.round(pesoAYuan() * 100.0) / 100.0;
-			String mensaje = this.numero + " " + moneda1 + " equivalen a " + convertido + " " + moneda2;
+			String mensaje = escribeMensaje(moneda1, moneda2, convertido);
 			JOptionPane.showMessageDialog(null, mensaje, "Conversion efectuada", 1);
 		}else if (moneda == "Dolar a Peso") {
 			moneda1 = "Dolares";
 			moneda2 = "Pesos";
 			convertido = Math.round(dolarAPeso() * 100.0) / 100.0;
-			String mensaje = this.numero + " " + moneda1 + " equivalen a " + convertido + " " + moneda2;
+			String mensaje = escribeMensaje(moneda1, moneda2, convertido);
 			JOptionPane.showMessageDialog(null, mensaje, "Conversion efectuada", 1);
 		}else if (moneda == "Euro a Peso") {
 			moneda1 = "Euros";
 			moneda2 = "Pesos";
 			convertido = Math.round(euroAPeso() * 100.0) / 100.0;
-			String mensaje = this.numero + " " + moneda1 + " equivalen a " + convertido + " " + moneda2;
+			String mensaje = escribeMensaje(moneda1, moneda2, convertido);
 			JOptionPane.showMessageDialog(null, mensaje, "Conversion efectuada", 1);
 		}else if (moneda == "Real a Peso") {
 			moneda1 = "Reales";
 			moneda2 = "Pesos";
 			convertido = Math.round(realAPeso() * 100.0) / 100.0;
-			String mensaje = this.numero + " " + moneda1 + " equivalen a " + convertido + " " + moneda2;
+			String mensaje = escribeMensaje(moneda1, moneda2, convertido);
 			JOptionPane.showMessageDialog(null, mensaje, "Conversion efectuada", 1);
 		}else if (moneda == "Yen a Peso") {
 			moneda1 = "Yenes";
 			moneda2 = "Pesos";
 			convertido = Math.round(yenAPeso() * 100.0) / 100.0;
-			String mensaje = this.numero + " " + moneda1 + " equivalen a " + convertido + " " + moneda2;
+			String mensaje = escribeMensaje(moneda1, moneda2, convertido);
 			JOptionPane.showMessageDialog(null, mensaje, "Conversion efectuada", 1);
 		}else if (moneda == "Yuan a Peso") {
 			moneda1 = "Yuanes";
 			moneda2 = "Pesos";
 			convertido = Math.round(yuanAPeso() * 100.0) / 100.0;
-			String mensaje = this.numero + " " + moneda1 + " equivalen a " + convertido + " " + moneda2;
+			String mensaje = escribeMensaje(moneda1, moneda2, convertido);
 			JOptionPane.showMessageDialog(null, mensaje, "Conversion efectuada", 1);
 		}
 			

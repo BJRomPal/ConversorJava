@@ -1,10 +1,35 @@
+package Conversion;
+
+/**
+ * Paquete de conversion de diferentes cosas
+ * 
+ * @version 1.0
+ * @author MarianoMiro
+ * 
+ * 
+ */
+
 import javax.swing.JOptionPane;
+
 
 import conversores.ConversorMonedas;
 import conversores.ConversorPesos;
 import conversores.ConversorTemperatura;
 import conversores.MainMenu;
 import conversores.RepetirConversion;
+
+/**
+ * 
+ * 
+ * 
+ * Genera el programa hasta que se cumpla la condicion de que el usuario no decida utilizar mas conversiones.
+ * Conversiones aceptadas: Temperatura, Peso, Monedas.
+ * @param programaFuncionando - boolean
+ * @author Mariano Miro
+ * @version 1.0
+ *
+ *
+ */
 
 public class ProgramaConversion_V1 {
 
@@ -14,6 +39,8 @@ public class ProgramaConversion_V1 {
 
 		boolean programaFuncionando = true;
 
+		
+		
 		while (programaFuncionando) {
 
 			int opcion = menu.seleccionarOpcion();
@@ -54,7 +81,7 @@ public class ProgramaConversion_V1 {
 			int decision = repetir.preguntarRepeticion();
 
 			if (decision == 1) {
-				JOptionPane.showMessageDialog(null, "Programa Terminado", "", 0);
+				JOptionPane.showMessageDialog(null, "Programa Terminado", null, 0);
 				programaFuncionando = false;
 			}
 
